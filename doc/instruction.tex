@@ -1,0 +1,269 @@
+\documentclass{aastex}
+\usepackage{spr-astr-addons}
+\usepackage{url}\urlstyle{rm}
+%\usepackage{verbatim}
+
+
+
+\RequirePackage{color}
+\def\imagei{\centerline{\color[gray]{.75}\rule{\hsize}{4pc}}}%
+\def\imageii{\centerline{\color[gray]{.75}\rule{4pc}{4pc}}}%
+
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand{\emaila}{authors@email.com}
+
+
+
+
+\begin{document}
+
+\title{  Article preparation guidelines
+  for\\  \textit{Astrophysics and Space Science}}
+%% Running heads
+\shorttitle{Article preparation guidelines}
+\shortauthors{Short Author}
+
+
+
+\begin{abstract}
+This paper explains the use of template provided  for manuscript
+preparation and give some practical guidance.
+\end{abstract}
+
+
+\section{Introduction}\label{s:intro}
+
+Template is based on AAS\TeX{} v5 package developed 
+by the American Astronomical
+Society (AAS). It is available in the bundle you have downloaded, or
+you can obtain it from  
+\url{http://www.journals.uchicago.edu/AAS/AASTeX/}.
+The AAS\TeX{} guide on manuscript preparation should be followed.
+
+The bundle comes with two additional packages:
+\verb!spr-astr-addons.sty!
+and \verb!spr-mp-nameyear.bst!.
+\linebreak The package \texttt{spr-astr-addons.sty} redefines some internals of
+AAS\TeX{} class, giving an author a general idea about the final article output.
+It superseeds layout AAS\TeX{} class options. The package defines new macros
+\verb!\citeauthor!, \verb!\citeyear! (see Section~\ref{ss:cr}) and
+redefines abbreviations of journal names (Section~\ref{s:ja}). 
+Author may wish not use this package, having plain AAS\TeX.
+
+
+The file \texttt{spr-mp-nameyear.bst} is a Bib\TeX{} style (see
+Section~\ref{ss:bib})
+
+
+Next, there are some additional remarks on manuscript preparation that are
+not in AAS\TeX{} guide.
+
+
+\section{Frontmatter}
+\subsection{Abstract}\label{ss:abs} 
+While in gereral we strongly encourage authors
+to use \verb!\cite! command to cite reference(s) (see
+Section~\ref{ss:cr}), the abstract is an exception.
+Please cite references, that appear in abstact, in full. 
+This is due to the fact that an electronic version of abstract can appear 
+on the web without references list, resulting in citing undefined item.
+Therefore, please cite \textsf{Alexander and Ferguson, \apj\ \textbf{437}, 879 (1994)}
+ instead of 
+\textsf{\cite{ale94}}.
+
+
+\section{Mainmatter}
+
+\subsection{Cite references}\label{ss:cr}
+
+Please use  use \verb!\cite! command (or equivalent command 
+\verb!\citep!, 
+\verb!\citet!,
+\verb!\citeauthor!, 
+\verb!\citeyear!)
+to cite reference(s). See Section 4 of \verb!sample.tex!.
+ 
+
+\subsection{Use labels}\label{ss:ul}
+You can define labels for many items like sections, equations, figures, tables, and
+citations. The systematic use of these labels greatly facilitates the writing of a scientific
+article. It permits one to re-number or re-order automatically the
+features during the compilation 
+(e.g. when adding or moving a section). 
+
+
+\section{Journal abbreviations}\label{s:ja}
+
+
+\bgroup\footnotesize\sffamily
+\def\gobble#1{}
+\gdef\renewcommand#1#2{%
+\makeatletter
+\def\ref@jnl#1{#1}%
+\item[\hbox to3pc{\sffamily\textbackslash\expandafter\gobble \string #1}]  #1%
+\makeatother
+}%
+\begin{itemize}
+% Redefining Journal Acronyms
+\renewcommand\aj{\ref@jnl{Astron.~J.}}%
+          % Astronomical Journal
+\renewcommand\actaa{\ref@jnl{Acta Astron.}}%
+          % Acta Astronomica
+\renewcommand\araa{\ref@jnl{Annu. Rev. Astron. Astrophys.}}%
+          % Annual Review of Astron and Astrophys
+\renewcommand\apj{\ref@jnl{Astrophys.~J.}}%
+          % Astrophysical Journal
+\renewcommand\apjl{\ref@jnl{Astrophys. J. Lett.}}%
+          % Astrophysical Journal, Letters
+\renewcommand\apjs{\ref@jnl{Astrophys. J. Suppl. Ser.}}%
+          % Astrophysical Journal, Supplement
+\renewcommand\ao{\ref@jnl{Appl. Opt.}}%
+          % Applied Optics
+\renewcommand\apss{\ref@jnl{Astrophys. Space Sci.}}%
+          % Astrophysics and Space Science
+\renewcommand\aap{\ref@jnl{Astron. Astrophys.}}%
+          % Astronomy and Astrophysics
+\renewcommand\aapr{\ref@jnl{Astron. Astrophys. Rev.}}%
+          % Astronomy and Astrophysics Reviews
+\renewcommand\aaps{\ref@jnl{Astron. Astrophys. Suppl. Ser.}}%
+          % Astronomy and Astrophysics, Supplement
+\renewcommand\azh{\ref@jnl{Astron. Zh.}}%
+          % Astronomicheskii Zhurnal
+\renewcommand\baas{\ref@jnl{Bull. Am. Astron. Soc.}}%
+          % Bulletin of the AAS
+\renewcommand\caa{\ref@jnl{Chin. Astron. Astrophys.}}%
+  % Chinese Astronomy and Astrophysics
+\renewcommand\cjaa{\ref@jnl{Chin. J. Astron. Astrophys.}}%
+  % Chinese Journal of Astronomy and Astrophysics
+\renewcommand\icarus{\ref@jnl{Icarus}}%
+  % Icarus
+\renewcommand\jcap{\ref@jnl{J. Cosmol. Astropart. Phys.}}%
+  % Journal of Cosmology and Astroparticle Physics
+\renewcommand\jrasc{\ref@jnl{J.~R. Astron. Soc. Can.}}%
+          % Journal of the RAS of Canada
+\renewcommand\memras{\ref@jnl{Mem. R. Astron. Soc.}}%
+          % Memoirs of the RAS
+\renewcommand\mnras{\ref@jnl{Mon. Not. R. Astron. Soc.}}%
+          % Monthly Notices of the RAS
+\renewcommand\na{\ref@jnl{New Astron.}}%
+  % New Astronomy
+\renewcommand\nar{\ref@jnl{New Astron. Rev.}}%
+  % New Astronomy Review
+\renewcommand\pra{\ref@jnl{Phys. Rev.~A}}%
+          % Physical Review A: General Physics
+\renewcommand\prb{\ref@jnl{Phys. Rev.~B}}%
+          % Physical Review B: Solid State
+\renewcommand\prc{\ref@jnl{Phys. Rev.~C}}%
+          % Physical Review C
+\renewcommand\prd{\ref@jnl{Phys. Rev.~D}}%
+          % Physical Review D
+\renewcommand\pre{\ref@jnl{Phys. Rev.~E}}%
+          % Physical Review E
+\renewcommand\prl{\ref@jnl{Phys. Rev. Lett.}}%
+          % Physical Review Letters
+\renewcommand\pasa{\ref@jnl{Proc. Astron. Soc. Aust.}}%
+  % Publications of the Astron. Soc. of Australia
+\renewcommand\pasp{\ref@jnl{Publ. Astron. Soc. Pac.}}%
+          % Publications of the ASP
+\renewcommand\pasj{\ref@jnl{Publ. Astron. Soc. Jpn.}}%
+          % Publications of the ASJ
+\renewcommand\qjras{\ref@jnl{Q. J. R. Astron. Soc.}}%
+          % Quarterly Journal of the RAS
+\renewcommand\rmxaa{\ref@jnl{Rev. Mexicana Astron. Astrofis.}}%
+  % Revista Mexicana de Astronomia y Astrofisica
+\renewcommand\skytel{\ref@jnl{Sky Telesc.}}%
+          % Sky and Telescope
+\renewcommand\solphys{\ref@jnl{Sol. Phys.}}%
+          % Solar Physics
+\renewcommand\sovast{\ref@jnl{Soviet Astron.}}%
+          % Soviet Astronomy
+\renewcommand\ssr{\ref@jnl{Space Sci. Rev.}}%
+          % Space Science Reviews
+\renewcommand\zap{\ref@jnl{Z. Astrophys.}}%
+          % Zeitschrift fuer Astrophysik
+\renewcommand\nat{\ref@jnl{Nature}}%
+          % Nature
+\renewcommand\iaucirc{\ref@jnl{IAU Circ.}}%
+          % IAU Cirulars
+\renewcommand\aplett{\ref@jnl{Astrophys. Lett.}}%
+          % Astrophysics Letters and Communications
+\renewcommand\apspr{\ref@jnl{Astrophys. Space Phys. Res.}}%
+          % Astrophysics Space Physics Research
+\renewcommand\bain{\ref@jnl{Bull. Astron. Inst. Neth.}}%
+          % Bulletin Astronomical Institute of the Netherlands
+\renewcommand\fcp{\ref@jnl{Fundam. Cosmic Phys.}}%
+          % Fundamental Cosmic Physics
+\renewcommand\gca{\ref@jnl{Geochim. Cosmochim. Acta}}%
+          % Geochimica Cosmochimica Acta
+\renewcommand\grl{\ref@jnl{Geophys. Res. Lett.}}%
+          % Geophysics Research Letters
+\renewcommand\jcp{\ref@jnl{J. Chem. Phys.}}%
+          % Journal of Chemical Physics
+\renewcommand\jgr{\ref@jnl{J. Geophys. Res.}}%
+          % Journal of Geophysical Research
+\renewcommand\jqsrt{\ref@jnl{J. Quant. Spec. Radiat. Transf.}}%
+          % Journal of Quantitiative Spectroscopy and Radiative Trasfer
+\renewcommand\memsai{\ref@jnl{Mem. Soc. Astron. Italiana}}%
+          % Mem. Societa Astronomica Italiana
+\renewcommand\nphysa{\ref@jnl{Nucl. Phys.~A}}%
+          % Nuclear Physics A
+\renewcommand\physrep{\ref@jnl{Phys. Rep.}}%
+          % Physics Reports
+\renewcommand\physscr{\ref@jnl{Phys. Scr.}}%
+          % Physica Scripta
+\renewcommand\planss{\ref@jnl{Planet. Space Sci.}}%
+          % Planetary Space Science
+\renewcommand\procspie{\ref@jnl{Proc. SPIE}}%
+          % Proceedings of the SPIE
+%
+\end{itemize}
+\egroup
+
+\newpage
+\section{Backmatter}
+
+
+\subsection{The \texttt{thebibliography} environment}\label{ss:bib}
+AASTeX uses \verb!natbib! package for citation management. 
+If you use BibTeX to generate the bibliography list, please use 
+\verb!spr-mp-nameyear-cnd!  style provided with this bundle: 
+
+\smallskip
+\begin{footnotesize}
+\begin{verbatim}
+\bibliographystyle{spr-mp-nameyear-cnd}  
+\bibliography{<bib file>}                
+\end{verbatim}
+\end{footnotesize}
+\smallskip
+
+
+\noindent Alternatively  you can define bibliography list as follows:
+
+\smallskip
+\begin{footnotesize}
+\begin{verbatim}
+\bibitem[\protect\citeauthoryear{<author>}{<year>}]{<key>} 
+  <bibliographic data>
+\end{verbatim}
+\end{footnotesize}
+
+
+\makeatletter
+\let\clear@thebibliography@page=\relax
+\makeatother
+
+\begin{thebibliography}
+
+\bibitem[\protect\citeauthoryear{{Alexander} and {Ferguson}}{1994}]{ale94}
+% authors
+Alexander,~D.R., Ferguson,~J.W.: 
+% article title
+Low-temperature Rosseland opacities.
+% journal title, volume, first page, year of publication
+\apj\ \textbf{437}, 879 (1994)
+
+
+\end{thebibliography}
+\end{document}
+

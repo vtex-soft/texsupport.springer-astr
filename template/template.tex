@@ -1,0 +1,180 @@
+%%
+%% Template file for ASTR journal
+%%
+%%  2007 September
+%%
+%% template.tex
+\documentclass{aastex}          %% The manuscript based on AASTeX v5.x
+\usepackage{spr-astr-addons}    %% mimicing ASTR journal style
+                                %% two-side printing, etc.
+%\usepackage{url}\urlstyle{rm}  %% url style 
+
+
+
+
+
+%% If you want to create your own macros, you can do so
+%% using \newcommand. 
+%% Your macros should appear before the \begin{document} command.
+%%
+% \newcommand{}{}
+% \newcommand{}[]{}
+
+
+
+
+\begin{document}
+%% Article title
+%
+\title{<Article title>}
+
+%% Running heads
+\shorttitle{<Short article title>}
+\shortauthors{<Autors et al.>}
+
+%% Author and Affilations
+\author{Author\altaffilmark{}} 
+%\and 
+%\author{\altaffilmark{}}
+%\affil{}
+%\email{} %% non-output
+
+%% Alternate Affilations
+\altaffiltext{1}{Affilation}
+%\altaffiltext{2}{}
+%\altaffiltext{3}{}
+
+
+%% Abstract
+%\begin{abstract}
+%\end{abstract}
+
+%% Keywords
+%\keywords{}
+
+
+
+%%  Please use labels (\label, \ref) for section, figure, table, 
+%%  equation  reference. Use \cite for bibliography references.
+%
+%\section{}%\label{s:?}
+%\subsection{}%\label{ss:?}
+%\subsubsection{}%\label{sss:?}
+
+%% Math 
+%
+%\begin{eqnarray}%\label{eqn:?}
+%\\ \nonumber
+%\end{eqnarray}
+%
+%\begin{equation}%\label{eqn:?}
+%\end{equation}
+
+
+
+%% Table (two-column)
+%
+% \begin{table*}%%[tb]
+% \small
+% \caption{Caption} %% no full stop at the end of caption
+%  \label{tbl:?}
+% \begin{tabular}{}
+% \tableline  %% rule at top
+% \tablenotemark{a} 
+% <entries>
+% \tableline %% rule at bottom
+% \end{tabular}
+%
+%% Any table notes must follow the \end{tabular} command. 
+% \tablenotetext{a}{}
+% \tablecomments{}
+% \end{table*}
+
+
+%% Table (one-colum)
+%
+% \begin{table}
+% \caption{} %% no full stop at the end of caption
+% \label{tbl:?}
+% \begin{tabular}{}
+% \tableline  %% rule at top
+% \tablenotemark{a} 
+% <entries>
+% \tableline %% rule at bottom
+% \end{tabular}
+% \end{table}
+
+%% Deluxe tabel (refer to AASTeX documentation)
+%
+% \begin{deluxetable}{ccrrrrrrrrcrl}
+% \tabletypesize{\scriptsize}
+% \rotate
+% \tablecaption{}% %% no full stop at the end of caption
+% \label{tbl:?} 
+% \tablewidth{0pt}
+% \tablehead{\colhead{}}
+% \startdata
+% <entries>
+% \enddata
+%
+%% Text for table notes should follow after the \enddata but before
+%% the \end{deluxetable}. Make sure there is at least one \tablenotemark
+%% in the table for each \tablenotetext.
+% \tablecomments{}
+% \tablenotetext{a}{}
+% \tablenotetext{b}{}
+% \end{deluxetable}
+
+
+
+%% Figure 
+%
+% \begin{figure}%[tb]
+% \includegraphics{}
+% \includegraphics[width=\columnwidth]{}
+% \caption{} %% no full stop at the end of caption
+% \label{fig:?}
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+%% Acknowledgements
+%
+% \acknowledgments
+% <Acnowledgments text>
+
+
+%% References
+%% Please cite all reference entries in the article text using \cite or
+%% equivalent command. 
+
+
+
+%%%  Using BibTeX  (Name-Year style)
+%
+% \bibliographystyle{spr-mp-nameyear-cnd}  %% BibTeX style
+% \bibliography{<bib data>}                %% BibTeX data
+
+
+%% Non-BibTeX  (Name-Year style)
+%
+% \begin{thebibliography}{}
+% \bibitem[\protect\citeauthoryear{<author>}{<year>]{ref:?}
+%    <ref. entry>
+% \bibitem[\protect\citeauthoryear{<author>}{<year>]{ref:?}
+%    <ref. entry>
+% \end{thebibliography}
+
+
+
+\end{document}
+
+%%
+%% End of file `template.tex'.
