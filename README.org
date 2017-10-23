@@ -3,19 +3,18 @@
 * Getting started
 
   Download
-  [[https://github.com/vtex-soft/texsupport.springer-sola/raw/master/release/sola-project-template.zip][sola-project-template]]
+  [[https://github.com/vtex-soft/texsupport.springer-astr/raw/master/release/astr-project-template.zip][astr-project-template]]
   package and unzip it.
-  Rename the folder =sola-project-template= to =<your-project-name>=.
+  Rename the folder =astr-project-template= to =<your-project-name>=.
 
 * Package content
 
   - sty/ 
-    - ~spr-sola-addons.sty~
-    - ~solarphysics.cls~
-    - ~orcid.eps~
+    - ~spr-astr-addons.sty~
+    - ~aastex.cls~
 
   - bst/
-    - ~spr-mp-sola.bst~ - bibtex style file
+    - ~ spr-mp-nameyear-cnd.bst~ - bibtex style file
 
   - example/ - Sample paper. It contains useful information about typseting article  with solarphysics class file. 
     - ~sola_example_6.tex~
@@ -26,8 +25,6 @@
 
   - template/ 
     - ~template.tex~            - template file 
-    - ~sola_example_labels.txt~ - extra information for labelling 
-    - ~sola_keyword_list.txt~   - keyword list
       
 * Submission
 
@@ -37,4 +34,4 @@
 * Bug reports
 
   Please submit bug report or feature requests
-  at [[https://github.com/vtex-soft/texsupport.springer-sola/issues][github page]].
+  at [[https://github.com/vtex-soft/texsupport.springer-astr/issues][github page]].

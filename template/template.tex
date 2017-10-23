@@ -1,4 +1,5 @@
-%%
+\RequirePackage{etoolbox}\csdef{input@path}{{../sty/}{img/}}%
+%% 
 %% Template file for ASTR journal
 %%
 %%  2007 September
@@ -26,11 +27,11 @@
 \begin{document}
 %% Article title
 %
-\title{<Article title>}
+\title{Article title}
 
 %% Running heads
-\shorttitle{<Short article title>}
-\shortauthors{<Autors et al.>}
+\shorttitle{Short article title}
+\shortauthors{Autors et al.}
 
 %% Author and Affilations
 \author{Author\altaffilmark{}} 
@@ -159,8 +160,8 @@
 
 %%%  Using BibTeX  (Name-Year style)
 %
-% \bibliographystyle{spr-mp-nameyear-cnd}  %% BibTeX style
-% \bibliography{<bib data>}                %% BibTeX data
+% \bibliographystyle{bib/spr-mp-nameyear-cnd}  %% BibTeX style
+% \bibliography{bib/<bib data>}                %% BibTeX data
 
 
 %% Non-BibTeX  (Name-Year style)

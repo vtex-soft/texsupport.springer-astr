@@ -1,4 +1,5 @@
-%%
+\RequirePackage{etoolbox}\csdef{input@path}{{../sty/}{img/}}%
+%% 
 %% Beginning of file 'sample.tex'
 %%
 %%  2007 September
@@ -453,9 +454,9 @@ Use \verb!\cite! command to cite reference(s).
 
 
 \nocite{*}
-\bibliographystyle{spr-mp-nameyear-cnd}
+\bibliographystyle{bib/spr-mp-nameyear-cnd}
 %\bibliography{myref}
-\bibliography{biblio-u1}
+\bibliography{bib/biblio-u1}
 
 \end{document}
 
