@@ -14,21 +14,19 @@
     - ~aastex.cls~
 
   - bst/
-    - ~ spr-mp-nameyear-cnd.bst~ - bibtex style file
+    - ~spr-mp-nameyear-cnd.bst~ - bibtex style file
 
-  - example/ - Sample paper. It contains useful information about typseting article  with solarphysics class file. 
-    - ~sola_example_6.tex~
-    - ~sola_example_6.pdf~
-    - ~sola_example_6.bbl~
-    - ~bib/sola_bibliography_example.bib~ - bibliography database
-    - ~img/fig1*.eps~
+  - example/ - Sample paper.
+    - ~sample.tex~
+    - ~sample.pdf~
+    - ~bib/biblio-u1~ - bibliography database
 
   - template/ 
-    - ~template.tex~            - template file 
+    - ~template.tex~  - template file
       
 * Submission
 
-  Submit one single file as a zip archive. 
+  Submit one single file as a zip archive.
   Pack your root folder =<your-project-name>= with files and subfolders.
   
 * Bug reports
