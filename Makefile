@@ -19,6 +19,9 @@ zip:
 	rm -rf $(temp)/
 	mv $(temp).zip release/
 
+add-github-repo:
+	git remote add github git@github.com:vtex-soft/texsupport.springer-astr.git
+
 push-to-github:
 	git push -u github master
 
