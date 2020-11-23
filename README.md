@@ -1,58 +1,35 @@
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#orgd0304f9">1. Getting started</a></li>
-<li><a href="#org6d80446">2. Package content</a></li>
-<li><a href="#org7560b14">3. Submission</a></li>
-<li><a href="#orgd5b387b">4. Bug reports</a></li>
-</ul>
-</div>
-</div>
+# texsupport.springer-astr
 
+LaTeX author support files for the journal 
+[Astrophysics and Space Science (ASTR)](https://www.springer.com/journal/10509).
 
-<a id="orgd0304f9"></a>
+## Contents
 
-# Getting started
+The following files are given in the repository (or directly in `.zip` archive):
 
-Download
-[astr-project-template](https://github.com/vtex-soft/texsupport.springer-astr/raw/master/release/astr-project-template.zip)
-package and unzip it.
-Rename the folder `astr-project-template` to `<your-project-name>`.
+-   `aastex.cls`, `spr-astr-addons.sty` - LaTeX style files designed for *ASTR* journal articles. 
+    Please do not change them. These files are already loaded in the respective template files; 
+-   `template.tex` - main template file for manuscript preparation;
+-   `sample.pdf` - sample paper;
+-   `sample.tex` - source file of the sample paper;
+-   `biblio-u1.bib` - bibliography source file of the sample paper;
+-   `shortguide.pdf` - short instructions of manuscript preparation;
+-   `shortguide.tex` - source file of instructions;
+-   `spr-mp-nameyear-cnd.bst` - BibTeX styles to prepare bibliography file.
+    More information can be found [here](http://www.bibtex.org/Using/) 
+    or [here](https://www.latex-tutorial.com/tutorials/bibtex/).
 
+## Setup
 
-<a id="org6d80446"></a>
+-   Clone the repository or download the `.zip` archive.
+-   Install LaTeX style files (`aastex.cls`, `spr-astr-addons.sty`, `spr-mp-nameyear-cnd.bst`) 
+    in your TeX system or place them in the same directory where your `*.tex` file is.
+-   Read the instructions (`shortguide.pdf`) for the preparation of your LaTeX document.
+-   Use the template file `template.tex` to prepare your manuscript.
 
-# Package content
+## Bug reports
 
--   sty/ 
-    -   `spr-astr-addons.sty`
-    -   `aastex.cls`
-
--   bst/
-    -   `spr-mp-nameyear-cnd.bst` - bibtex style file
-
--   example/ - Sample paper.
-    -   `sample.tex`
-    -   `sample.pdf`
-    -   `bib/biblio-u1` - bibliography database
-
--   template/ 
-    -   `template.tex`  - template file
-
-
-<a id="org7560b14"></a>
-
-# Submission
-
-Submit one single file as a zip archive.
-Pack your root folder `<your-project-name>` with files and subfolders.
-
-
-<a id="orgd5b387b"></a>
-
-# Bug reports
-
-Please submit bug report or feature requests
-at [github page](https://github.com/vtex-soft/texsupport.springer-astr/issues).
+Please submit bug reports and/or feature requests
+at [GitHub page](https://github.com/vtex-soft/texsupport.springer-astr/issues) or 
+[latex-support@vtex.lt](mailto:latex-support@vtex.lt).
 
