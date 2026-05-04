@@ -40,7 +40,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{spr-astr-addons}
-             [2021/08/04 v1.02 
+             [2026/04/05 v1.03 
                  Springer style for ASTR journal]
 
 %\RequirePackage[T1]{fontenc}
@@ -260,7 +260,15 @@
 \AtBeginDocument{\enlargethispage{-\@@@firstpageskip}}
 \def\@texttop{{\thispagestyle{copyright}\twocolumn[\vtop to\@@@topboxheight{\@@@title\par\@@@author@fmt{\expandafter\@@@author}\par\@@@copyright}]}\relax\global\let\@texttop\relax}
 
-
+\def\@outputbox@append #1{%
+   \setbox\@outputbox \vbox {%
+     \@texttop
+     \boxmaxdepth \@maxdepth
+     \@outputbox@depth\dp\@outputbox
+     \unvbox \@outputbox
+     #1%
+   }%
+}
 
 
 \def\authorskip{\vskip0pt}
